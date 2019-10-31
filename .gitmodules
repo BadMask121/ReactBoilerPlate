@@ -1,0 +1,3 @@
+[submodule "wiki"]
+	path = wiki
+	url = https://bitbucket.org/divergentDev/msme-react-web.git/wiki
