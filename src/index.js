@@ -38,11 +38,11 @@ import * as Sentry from "@sentry/browser";
 
 import App from "./app";
 
-import {
-  Error401
-} from "./components/Error";
+// import {
+//   Error401
+// } from "./components/Error";
 
-import store from './providers/store'
+// import store from './providers/store'
 
 import whyDidYouRender from '@welldone-software/why-did-you-render'
 
@@ -119,11 +119,18 @@ const client = new ApolloClient({
 });
 
 ReactDom.render(
-  <CookiesProvider>
-    <Router>
-      <ApolloClient client={client}>
-        <App/>
-      </ApolloClient>
-    </Router>
-  </CookiesProvider>  
-  , document.getElementById('app'))
+	<CookiesProvider>
+		<Router>
+			{/* <ApolloProvider client={client}> */}
+				{/* <Provider store={store}> */}
+					{/* <ErrorBoundary> */}
+					{/* <SessionManager> */}
+						<App />
+						{/* </SessionManager> */}
+					{/* </ErrorBoundary> */}
+				{/* </Provider> */}
+			{/* </ApolloProvider> */}
+		</Router>
+	</CookiesProvider>,
+	document.getElementById("app"),
+);
