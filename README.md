@@ -1,16 +1,16 @@
 # ReactBoilerPlate
-My production based react boilerplate ( NOT ANOTHER REACT BOILERPLATE ;(   )\
+My production based react boilerplate ( NOT ANOTHER REACT BOILERPLATE ;(   )
 
-This is not your ordinary react boilerplate.\
+This is not your ordinary react boilerplate.
 
-This boilerplate takes into account of react redux and uses the Redux Docks design pattern\
+This boilerplate takes into account of react redux and uses the Redux Docks design pattern
 and also adopts the style of container and presentational way of creating react components
 
-Make sure you: \
+Make sure you: <br\>
 
-# `npm i` to install\
+# `npm i` to install
 
-and \
+and
 
 # `npm start` to start project
 
