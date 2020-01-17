@@ -3,8 +3,9 @@ const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
-const CompressionPlugin = require('compression-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const dotenv = require("dotenv");
 
@@ -16,6 +17,9 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 
   return prev;
 }, {});
+
+const debug =
+  process.env.NODE_ENV !== "production" || process.env.NODE_ENV !== "staging";
 
 module.exports = {
   module: {
@@ -29,7 +33,12 @@ module.exports = {
           loader: "babel-loader"
         }
       },
-
+      {
+        test: /\.jsx?$/,
+        resolve: {
+          extensions: [".js", ".jsx"]
+        }
+      },
       // second rule for css loader
       {
         test: /\.css$/,
@@ -93,7 +102,7 @@ module.exports = {
 
       //fourth rule for file type loaders
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/,
         loader: "url-loader?limit=100000"
       },
 
@@ -109,7 +118,6 @@ module.exports = {
     ]
     //end of rule
   },
-
   devServer: {
     historyApiFallback: true
   },
@@ -138,7 +146,15 @@ module.exports = {
 
   // our plugin definition
   plugins: [
-  
+    debug
+      ? new CopyPlugin([
+          {
+            from: "public/image",
+            to: "public/image",
+            force: true
+          }
+        ])
+      : [],
     new HtmlWebPackPlugin({
       template: "./public/index.html",
       filename: "./index.html",
@@ -148,15 +164,15 @@ module.exports = {
     new webpack.DefinePlugin(envKeys),
     new webpack.optimize.AggressiveMergingPlugin(),
     new ImageminPlugin({
-      disable: process.env.NODE_ENV !== "production",
+      disable: debug,
       test: /\.(jpe?g|png|gif|svg)$/i
     }),
     new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
+      filename: "[path].gz[query]",
+      algorithm: "gzip",
       test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
       threshold: 10240,
       minRatio: 0.8
-    }),
+    })
   ]
 };

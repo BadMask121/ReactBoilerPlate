@@ -1,5 +1,5 @@
 {
     "watchFolder": "./public/less/",
     "outputFolder": "./public/css/",
-    "mainFile": "symmetry.less"
+    "mainFile": "donorly.less"
 }

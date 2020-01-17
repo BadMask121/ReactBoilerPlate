@@ -1,0 +1,128 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 50%;
+
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-top: 1.5rem;
+
+        p {
+            font-weight: bolder;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+        }
+
+        .__nav {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-around;
+
+
+            a:first-child {
+                border: 1px solid rgba(90, 155, 123, 1);
+                border-radius: 4px 0px 0px 4px;
+                border-right: none;
+            }
+
+            a:last-child {
+                border: 1px solid rgba(90, 155, 123, 1);
+                border-radius: 0px 4px 4px 0px;
+                border-left: none;
+            }
+
+            a {
+                width: 50%;
+                height: 100%;
+                font-size: 0.9rem;
+                line-height: 2.5rem;
+                font-weight: 400;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                background-color: #fff;
+
+                &.active {
+                    background-color: rgba(90, 155, 123, 1);
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem 0 2rem 0;
+        width: 50%;
+
+        .loginSignIn {
+            font-size: 1.1rem;
+            height: 80px;
+            color: #fff;
+        }
+
+        .login_divider {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 1rem 0 1rem 0;
+
+            hr {
+                margin: 0px;
+                height: 1px;
+                width: 100%;
+                border-top: 1px dashed #dedede;
+            }
+
+            span {
+                margin: 0 10px;
+                color: #000000;
+                font-size: 14px;
+            }
+        }
+
+        .sign__in__with {
+
+            .sign__in__with__facebook {
+                display: flex;
+                flex-direction: row;
+                background-color: #4C70BB;
+                border-radius: 4px 0 0 4px;
+                height: 80px;
+
+                .signInIcon {
+                    height: inherit;
+                    background: #4C70BB;
+                    width: 20%;
+                    z-index: 1;
+                    border-radius: 4px 0 0 4px;
+                    text-align: center;
+                    line-height: 80px;
+                    color: #fff;
+                }
+
+                .signInWithContainer {
+                    width: 100%;
+                    height: inherit;
+                }
+
+                .withFacebookBtn {
+                    width: 100%;
+                    border-radius: 0 4px 4px 0;
+                    height: inherit;
+                    text-align: center;
+                    background: #3b5998;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,294 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Josefin Sans Thin Italic'), local('JosefinSans-ThinItalic'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3GZQNVED7rKGKxtqIqX5EUCEQZbHoEig.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Josefin Sans Light Italic'), local('JosefinSans-LightItalic'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3HZQNVED7rKGKxtqIqX5EUCETRfm0jqps.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Josefin Sans Italic'), local('JosefinSans-Italic'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3EZQNVED7rKGKxtqIqX5EUCEx6XH0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Josefin Sans SemiBold Italic'), local('JosefinSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3HZQNVED7rKGKxtqIqX5EUCESleG0jqps.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Josefin Sans Bold Italic'), local('JosefinSans-BoldItalic'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3HZQNVED7rKGKxtqIqX5EUCETBeW0jqps.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3EZQNVED7rKGKxtqIqX5Ecbkx6XH0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3aZQNVED7rKGKxtqIqX5EUDXx9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Josefin Sans SemiBold'), local('JosefinSans-SemiBold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ec0lhte10k.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+}
+body {
+  background-color: #F9FBFD;
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 4em 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 100vh;
+  width: 100%;
+}
+.__primary-btn {
+  background-color: #ed9b40;
+  line-height: 0.1rem;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 14px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.1s all linear;
+  box-shadow: 0 2px 8px 0 rgba(248, 128, 48, 0.35);
+  cursor: pointer;
+}
+.__primary-btn:hover {
+  color: #ffffff;
+  background-color: rgba(237, 155, 64, 0.9);
+}
+.__primary-btn a {
+  color: white;
+  font-weight: bolder;
+  font-weight: 600;
+}
+.navbar.__header {
+  -webkit-box-shadow: 0 1px 2px rgba(190, 190, 190, 0.5);
+  box-shadow: 0 1px 2px rgba(190, 190, 190, 0.5);
+  height: 80px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-left: 54px;
+  padding-right: 54px;
+  z-index: 1;
+}
+.navbar .__items {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 31rem;
+}
+.navbar .__items a {
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s all linear;
+}
+.navbar .__items a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar .__items .__login-btn a {
+  color: #ec830a;
+  font-weight: 600;
+}
+.navbar .__items .__login-btn a:hover {
+  color: #ed9b40 !important;
+}
+.navbar .__items .__signup-btn {
+  background-color: #ed9b40;
+  line-height: 0.1rem;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 14px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.1s all linear;
+  box-shadow: 0 2px 8px 0 rgba(248, 128, 48, 0.35);
+  cursor: pointer;
+}
+.navbar .__items .__signup-btn:hover {
+  color: #ffffff;
+  background-color: rgba(237, 155, 64, 0.9);
+}
+.navbar .__items .__signup-btn a {
+  color: white;
+  font-weight: bolder;
+  font-weight: 600;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  width: 50%;
+}
+.loginContainer .titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-top: 1.5rem;
+}
+.loginContainer .titleContainer p {
+  font-weight: bolder;
+  font-size: 2.1rem;
+  line-height: 2.5rem;
+}
+.loginContainer .titleContainer .__nav {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.loginContainer .titleContainer .__nav a:first-child {
+  border: 1px solid #5a9b7b;
+  border-radius: 4px 0px 0px 4px;
+  border-right: none;
+}
+.loginContainer .titleContainer .__nav a:last-child {
+  border: 1px solid #5a9b7b;
+  border-radius: 0px 4px 4px 0px;
+  border-left: none;
+}
+.loginContainer .titleContainer .__nav a {
+  width: 50%;
+  height: 100%;
+  font-size: 0.9rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+}
+.loginContainer .titleContainer .__nav a.active {
+  background-color: #5a9b7b;
+  color: #fff;
+}
+.loginContainer .loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 0 2rem 0;
+  width: 50%;
+}
+.loginContainer .loginForm .loginSignIn {
+  font-size: 1.1rem;
+  height: 80px;
+  color: #fff;
+}
+.loginContainer .loginForm .login_divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
+.loginContainer .loginForm .login_divider hr {
+  margin: 0px;
+  height: 1px;
+  width: 100%;
+  border-top: 1px dashed #dedede;
+}
+.loginContainer .loginForm .login_divider span {
+  margin: 0 10px;
+  color: #000000;
+  font-size: 14px;
+}
+.loginContainer .loginForm .sign__in__with .sign__in__with__facebook {
+  display: flex;
+  flex-direction: row;
+  background-color: #4C70BB;
+  border-radius: 4px 0 0 4px;
+  height: 80px;
+}
+.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .signInIcon {
+  height: inherit;
+  background: #4C70BB;
+  width: 20%;
+  z-index: 1;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .signInWithContainer {
+  width: 100%;
+  height: inherit;
+}
+.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .withFacebookBtn {
+  width: 100%;
+  border-radius: 0 4px 4px 0;
+  height: inherit;
+  text-align: center;
+  background: #3b5998;
+}
+.d-inputContainer {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid #ddd;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.d-inputContainer .d-input {
+  border: none;
+  width: 100%;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: blue;
+}
+.d-inputContainer .d-icon {
+  padding-right: 5px;
+}
