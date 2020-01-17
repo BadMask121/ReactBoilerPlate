@@ -68,6 +68,41 @@
   font-display: swap;
   src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwOIpWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwIYqWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwN4rWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwPIsWqZPBQ.ttf) format('truetype');
+}
 body {
   background-color: #F9FBFD;
   margin: 0;
@@ -82,8 +117,7 @@ body {
   margin: 4em 1rem;
   font-size: 1.5rem;
   font-weight: 400;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
 }
 .__primary-btn {
   background-color: #ed9b40;
@@ -166,18 +200,66 @@ body {
   font-weight: bolder;
   font-weight: 600;
 }
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.footerContainer .copyright {
+  color: #807E9C;
+  font-style: normal;
+  line-height: normal;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footerContainer .links {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-between;
+  line-height: 0.9rem;
+}
+.footerContainer .links a {
+  font-size: 1rem;
+  color: #ed9b40;
+}
+.footerContainer .social__media {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  justify-content: space-between;
+}
+.footerContainer .social__media div {
+  display: flex;
+  justify-content: center;
+  background-color: #ed9b40;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  border-radius: 2px;
+}
+.footerContainer .social__media div i {
+  text-align: center;
+  line-height: 1rem;
+  color: #fff;
+}
 .loginContainer {
   display: flex;
   flex-direction: column;
   align-self: center;
   align-items: center;
-  width: 50%;
+  width: 400px;
+  overflow: hidden;
 }
 .loginContainer .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: inherit;
   margin-top: 1.5rem;
 }
 .loginContainer .titleContainer p {
@@ -220,7 +302,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin: 2rem 0 2rem 0;
-  width: 50%;
+  width: 400px;
 }
 .loginContainer .loginForm .loginSignIn {
   font-size: 1.1rem;
@@ -244,14 +326,20 @@ body {
   color: #000000;
   font-size: 14px;
 }
-.loginContainer .loginForm .sign__in__with .sign__in__with__facebook {
+.loginContainer .loginForm .sign__in__with__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+.loginContainer .loginForm .sign__in__with__container .facebook {
   display: flex;
   flex-direction: row;
-  background-color: #4C70BB;
+  background-color: #3b5998;
   border-radius: 4px 0 0 4px;
   height: 80px;
 }
-.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .signInIcon {
+.loginContainer .loginForm .sign__in__with__container .facebook .signInIcon {
   height: inherit;
   background: #4C70BB;
   width: 20%;
@@ -261,16 +349,84 @@ body {
   line-height: 80px;
   color: #fff;
 }
-.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .signInWithContainer {
+.loginContainer .loginForm .sign__in__with__container .facebook .signInWithBtnContainer {
   width: 100%;
   height: inherit;
 }
-.loginContainer .loginForm .sign__in__with .sign__in__with__facebook .withFacebookBtn {
+.loginContainer .loginForm .sign__in__with__container .facebook .withBtn {
   width: 100%;
   border-radius: 0 4px 4px 0;
   height: inherit;
   text-align: center;
   background: #3b5998;
+}
+.loginContainer .loginForm .sign__in__with__container .facebook .withBtn:hover {
+  background-color: #3b5898c9;
+}
+.loginContainer .loginForm .sign__in__with__container .google {
+  display: flex;
+  flex-direction: row;
+  background-color: #d62d20;
+  border-radius: 4px 0 0 4px;
+  height: 80px;
+}
+.loginContainer .loginForm .sign__in__with__container .google .signInIcon {
+  height: inherit;
+  background: #f03e31;
+  width: 20%;
+  z-index: 1;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+.loginContainer .loginForm .sign__in__with__container .google .signInWithBtnContainer {
+  width: 100%;
+  height: inherit;
+}
+.loginContainer .loginForm .sign__in__with__container .google .withBtn {
+  width: 100%;
+  border-radius: 0 4px 4px 0;
+  height: inherit;
+  text-align: center;
+  background: #d62d20;
+}
+.loginContainer .loginForm .sign__in__with__container .google .withBtn:hover {
+  background-color: #fff;
+}
+.loginContainer .loginForm .createaccount {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.loginContainer .loginForm .createaccount a {
+  color: #ed9b40;
+}
+.loginContainer .loginForm .forgotPassword {
+  position: absolute;
+  margin-left: -60px;
+  line-height: 80px;
+}
+.loginContainer .loginForm .forgotPassword a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #ed9b40;
+}
+.loginContainer .loginForm .forgotPassword a:hover {
+  color: rgba(248, 128, 48, 0.35);
+}
+.alert-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s,
+        transform 1s;
+  transform-style: preserve-3d;
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1s,
+        transform 1s;
 }
 .d-inputContainer {
   display: inline-flex;
@@ -287,7 +443,11 @@ body {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: blue;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-size: 14px;
+}
+.d-inputContainer .d-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 .d-inputContainer .d-icon {
   padding-right: 5px;

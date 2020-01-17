@@ -1,15 +1,53 @@
+.sign__in__with(@btnColor: #3b5998, @textColor: #fff, @iconColor: #4C70BB, @hovercolor) {
+    display: flex;
+    flex-direction: row;
+    background-color: @btnColor;
+    border-radius: 4px 0 0 4px;
+    height: 80px;
+
+    .signInIcon {
+        height: inherit;
+        background: @iconColor;
+        width: 20%;
+        z-index: 1;
+        border-radius: 4px 0 0 4px;
+        text-align: center;
+        line-height: 80px;
+        color: @textColor;
+    }
+
+    .signInWithBtnContainer {
+        width: 100%;
+        height: inherit;
+    }
+
+    .withBtn {
+        width: 100%;
+        border-radius: 0 4px 4px 0;
+        height: inherit;
+        text-align: center;
+        background: @btnColor;
+
+        &:hover {
+            background-color: @hovercolor;
+        }
+    }
+
+}
+
 .loginContainer {
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
-    width: 50%;
+    width: 400px;
+    overflow: hidden;
 
     .titleContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: inherit;
         margin-top: 1.5rem;
 
         p {
@@ -61,7 +99,7 @@
         flex-direction: column;
         justify-content: space-between;
         margin: 2rem 0 2rem 0;
-        width: 50%;
+        width: 400px;
 
         .loginSignIn {
             font-size: 1.1rem;
@@ -89,40 +127,72 @@
             }
         }
 
-        .sign__in__with {
 
-            .sign__in__with__facebook {
-                display: flex;
-                flex-direction: row;
-                background-color: #4C70BB;
-                border-radius: 4px 0 0 4px;
-                height: 80px;
+        .sign__in__with__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 180px;
 
-                .signInIcon {
-                    height: inherit;
-                    background: #4C70BB;
-                    width: 20%;
-                    z-index: 1;
-                    border-radius: 4px 0 0 4px;
-                    text-align: center;
-                    line-height: 80px;
-                    color: #fff;
-                }
+            .facebook {
+                .sign__in__with(#3b5998, #fff, #4C70BB, #3b5898c9);
+            }
 
-                .signInWithContainer {
-                    width: 100%;
-                    height: inherit;
-                }
+            .google {
+                .sign__in__with(#d62d20, #fff, #f03e31, #fff);
+            }
+        }
 
-                .withFacebookBtn {
-                    width: 100%;
-                    border-radius: 0 4px 4px 0;
-                    height: inherit;
-                    text-align: center;
-                    background: #3b5998;
+        .createaccount {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+
+            a {
+                color: @color-primary;
+            }
+        }
+
+        .forgotPassword {
+            position: absolute;
+            margin-left: -60px;
+            line-height: 80px;
+
+            a {
+                text-decoration: none;
+                font-size: 15px;
+                color: @color-primary;
+
+                &:hover {
+                    color: @color-primaryLight;
                 }
             }
         }
 
     }
 }
+
+.alert-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s,
+        transform 1s;
+    transform-style: preserve-3d;
+}
+
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1s,
+        transform 1s;
+}
+
+// .alert-exit {
+//     opacity: 1;
+// }
+
+// .alert-exit-active {
+//     opacity: 0;
+//     transform: translateX(100px);
+//     transition: opacity 300ms, transform 300ms;
+// }

@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "components/custom/Header";
+import { BrowserRouter } from "react-router-dom";
+import LoginForm from "components/custom/Form/LoginForm";
 const User = props => {
   return (
-    <div>
-      <div>User</div>
-    </div>
+    <BrowserRouter>
+      <LoginForm />
+    </BrowserRouter>
   );
 };
 
